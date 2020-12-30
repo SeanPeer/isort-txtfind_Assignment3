@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void print_lines(char *str, char c, char *word)
+int print_lines(char *str, char c, char *word)
 {
     int i = 1;
     char temp;
@@ -21,9 +21,10 @@ void print_lines(char *str, char c, char *word)
             printf("%s\n", str);
         }
     }
+    return 0;
 }
 
-void print_similar_words(char *str, char c, char *word)
+int print_similar_words(char *str, char c, char *word)
 {
     int i = 1;
     while ((c = getc(stdin)) != EOF)//while we are not at the End Of the File
@@ -48,6 +49,7 @@ void print_similar_words(char *str, char c, char *word)
             i = 0;
         }
     }
+    return 0;
 }
 
 int similar(char *s, char *t, int n)//checks for similarity between the words
