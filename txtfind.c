@@ -9,7 +9,7 @@ int print_lines(char *str, char c, char *word)
     while ((c = getc(stdin)) != EOF)//while we are not at the End Of the File
     {
         temp = c;
-        while ((c = getc(stdin)) != '\n')//finished reading a line
+        while ((c = getc(stdin)) != '\n' && (c = getc(stdin)) != '\0')//finished reading a line
         {
             str[i++] = c;
         }
